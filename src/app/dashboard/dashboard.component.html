@@ -1,0 +1,22 @@
+{{myName1}}
+
+
+
+<table>
+    <tr>
+        <th>SL </th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of myCars">
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.body}}</td>
+        <td> <button (click)="deleteCar(data)"> Delete</button></td>
+        
+    </tr>
+</table>
+
+
+

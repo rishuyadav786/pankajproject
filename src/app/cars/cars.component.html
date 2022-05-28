@@ -1,0 +1,34 @@
+{{wow}}
+my name is= {{myName}}
+<div class="container">
+
+
+<table>
+    <tr>
+        <th>SL </th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let data of myCars">
+        <td>{{data.id}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.body}}</td>
+        <td> <button (click)="deleteCar(data)"> Delete</button></td>
+        
+    </tr>
+</table>
+
+
+<button (click)="addCar()"> Add Car</button>
+<form #myForm="ngForm" (ngSubmit)="addCar()">
+    <input type="text" name="sl"[(ngModel)]="myCar.id" placeholder="Enter your Sl">
+    <input type="text" name="name" [(ngModel)]="myCar.title" placeholder="Enter your Name" >
+    <input type="text" name="price" [(ngModel)]="myCar.body" placeholder="Enter your Price">
+    <input type="submit" value="Add Car">
+
+    
+</form>
+
+
+</div>
